@@ -8,4 +8,5 @@ define('ENCRYPTION_KEY', hex2bin('0123456789abcdef0123456789abcdef0123456789abcd
 define('UPLOAD_DIR', __DIR__ . '/uploads/');
 
 // URL base for generating download links
-define('BASE_URL', 'http://localhost/temp_share/'); // Change this to your actual site URL
+define('BASE_URL', 'https://temp-share-jclf.onrender.com'); // Change this to your actual site URL
+
