@@ -662,129 +662,87 @@ footer.site-footer a:focus {
   color: #fff;
   outline: none;
 }
-/* Reset and base styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f7f8;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Container for forms and content */
+/* Container max width thoda kam karo mobile pe */
 .container {
-  background: white;
-  max-width: 400px;
+  max-width: 360px; /* pehle 400 tha, thoda kam kiya */
   width: 90%;
-  padding: 25px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 40px;
+  padding: 20px 20px;
 }
 
-/* Headings */
-h1, h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-/* Form styles */
-form {
+/* Code display box */
+.code-box {
+  position: relative;
+  border: 2px dashed #2d6cdf;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  word-break: break-all;
+  background: #f0f5ff;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-label {
-  font-weight: 600;
-  margin-bottom: 6px;
-  color: #555;
+/* Buttons inside code box aligned below code on small screens */
+.code-box button {
+  margin-left: 10px;
+  margin-top: 10px;
+  flex: none;
+  min-width: 100px;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
-input[type="text"],
-input[type="file"],
-button {
-  padding: 12px 15px;
-  border-radius: 5px;
-  border: 1.8px solid #ccc;
+/* Responsive adjustment: stack code and buttons vertically on narrow screens */
+@media (max-width: 400px) {
+  .code-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  .code-box button {
+    margin-left: 0;
+  }
+}
+
+/* Input field width 100% on small screens */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  border-radius: 8px;
+  border: 1.5px solid #2d6cdf;
+  box-sizing: border-box;
 }
 
-input[type="text"]:focus,
-input[type="file"]:focus {
-  border-color: #4A90E2;
-  outline: none;
-}
-
-button {
-  background-color: #4A90E2;
+/* Upload button style */
+button.upload-btn, button.download-btn {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 15px;
+  background: #5e2dde;
   color: white;
-  font-weight: 600;
-  cursor: pointer;
   border: none;
-  user-select: none;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #357ABD;
+button.upload-btn:hover, button.download-btn:hover {
+  background: #4316ac;
 }
 
-/* Error message styling */
-p.error {
-  color: #D8000C;
-  background-color: #FFBABA;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Success message */
-p.success {
-  color: #4F8A10;
-  background-color: #DFF2BF;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-weight: 600;
-  text-align: center;
-}
-
-/* Responsive typography */
-@media (max-width: 480px) {
-  body {
-    padding: 15px;
-  }
-  .container {
-    max-width: 100%;
-    padding: 20px 15px;
-    margin-top: 30px;
-  }
-  input[type="text"],
-  input[type="file"],
-  button {
-    font-size: 0.95rem;
-    padding: 10px 12px;
-  }
-}
-
-/* Footer text */
-footer {
-  margin-top: auto;
-  padding: 15px 0;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
+/* Reduce horizontal padding on the file input wrapper */
+input[type="file"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1.5px solid #2d6cdf;
 }
