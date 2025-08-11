@@ -157,9 +157,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['download_code'])) {
 <script src="script.js"></script>
 <footer class="site-footer">
   &copy; <?=date('Y')?> Powered by
-  <a href="https://t.me/GlitchX" target="_blank" rel="noopener">GlitchX</a> &amp;
-  <a href="https://primescript.com" target="_blank" rel="noopener">PrimeScript</a>
+  <a href="https://t.me/GlitchX777" target="_blank" rel="noopener">GlitchX</a> &amp;
+  <a href="https://t.me/primescripter" target="_blank" rel="noopener">PrimeScript</a>
 </footer>
 
 </body>
 </html>
+
