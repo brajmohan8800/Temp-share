@@ -35,3 +35,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: index.php?code=' . $code);
     exit;
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_FILES['uploaded_file'])) {
+        echo "File upload nahi hua.";
+        exit;
+    }
+
+    $error = $_FILES['uploaded_file']['error'];
+    if ($error !== UPLOAD_ERR_OK) {
+        echo "Upload error code: " . $error;
+        exit;
+    }
+
+    // Agar yahan aap file move kar rahe ho to uska code bhi bhejein.
+}
+?>
