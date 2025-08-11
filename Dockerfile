@@ -1,8 +1,7 @@
 # Use official PHP image with Apache
 FROM php:8.2-apache
 
-# Enable OpenSSL extension (required for encryption)
-RUN docker-php-ext-install openssl
+# Enable OpenSSL extension (required for encryption
 
 # Enable mod_rewrite (optional if you use URL rewriting)
 RUN a2enmod rewrite
