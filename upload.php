@@ -50,4 +50,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Agar yahan aap file move kar rahe ho to uska code bhi bhejein.
 }
+    $uploadDir = __DIR__ . '/uploads/';
+$filename = $code . '.bin'; // ya jo bhi aapka naming convention ho
+$filepath = $uploadDir . $filename;
+
+if (move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $filepath)) {
+    echo "File uploaded successfully: " . $filepath;
+} else {
+    echo "File upload failed.";
+}
 ?>
+
